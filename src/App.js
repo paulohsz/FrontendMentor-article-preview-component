@@ -27,7 +27,7 @@ class App extends Component {
           <Grid.Row columns={2}>
 
           <Grid.Column width={6}>
-            <Image src='/images/drawers.jpg' />
+            <Image src='/images/drawers.jpg' alt='Drawers' />
           </Grid.Column>
           
           <Grid.Column width={10} className='card-information'>
@@ -37,7 +37,7 @@ class App extends Component {
             <Grid className={ `avatar-share ${ footerMobile ? 'none' : ''} `}>
               <Grid.Row>
                 <Grid.Column width={10}>
-                  <Image src='/images/avatar-michelle.jpg' avatar />
+                  <Image src='/images/avatar-michelle.jpg' alt='Avatar Michelle' avatar />
                   <div className='card-inf-avatar'>
                   <span className='avatar-name'>Michelle Appleton</span><br />
                     28 Jun 2020
