@@ -1,38 +1,172 @@
-.App {
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font: 13px 'Manrope', sans-serif !important;
+  color: var(--Desaturated-Dark-Blue) !important;
+  background-color: var(--Light-Grayish-Blue) !important;
+}
+#root {
+  height: 100% !important;
+  display: grid !important;
+}
+.cont-main {
+  margin: auto !important;
+}
+
+.card-article {
+  background-color: var(--White);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0px !important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  border-radius: 12px;
+  border: none !important;
+  box-shadow: 3px 3px 3px rgba(34,36,38,.08);
+}
+.card-article.ui.grid>.row {
+  padding: 0px;
+}
+.card-article.ui.grid>.row>.column {
+  padding: 0px;
+}
+.card-article img {
+  border-radius: 12px 0px 0px 12px;
+}
+.card-article.ui.grid>.row>.column.card-information {
+  padding: 20px 32px;
+}
+.card-article .card-information h2{
+  color: var(--Very-Dark-Grayish-Blue) !important;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.card-inf-avatar {
+  display: inline-table;
+  font-size: 0.8rem;
+  color: var(--Grayish-Blue);
+}
+
+.card-information img {
+  margin-top: 14px;
+}
+
+.share-button i.inverted.circular.icon {
+  color: var(--Very-Dark-Grayish-Blue) !important;
+  background-color: var(--Light-Grayish-Blue) !important;
+  margin-top: 15px;
+  margin-right: 0px;
+  height: 24px !important;
+  width:  24px !important;
+  transition: color 150ms ease-in-out;
+}
+.share-button i.inverted.circular.icon:hover {
+  color: var(--White) !important;
+  background-color: var(--Grayish-Blue) !important;
+  opacity: 0.8;
+}
+.share-grid {
+  width: 180px !important;
+  color: var(--Grayish-Blue);
+}
+.share-grid .share-text {
+  font-size: 0.8rem;
+  padding-right: 10px;
+}
+.ui.inverted.top.popup.popup-share:before,
+.ui.inverted.popup.popup-share {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  padding: 5px;
+}
+.avatar-share img {
+  margin-top: 0px;
+}
+.ui.grid>.row>.column.avatar-share>img{
+  display: inline-block;
+  padding: 6px;
+  border-radius: 14px;
+  background-color: var(--Light-Grayish-Blue);
+  margin-top: 12px;
+  cursor: pointer;
+}
+.ui.grid>.row>.column.avatar-share>img:hover {
+  color: var(--White);
+}
+.card-inf-avatar .avatar-name {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 700;
+}
+.attribution {
+  font-size: 0.8rem; 
   text-align: center;
+  color: var(--Very-Dark-Grayish-Blue);
+  margin-top: 14px;
+}
+.attribution a { 
+  color: var(--Very-Dark-Grayish-Blue);  
+  margin-left: 3px;
+}
+.attribution a:hover { 
+  color: var(--Desaturated-Dark-Blue);
+}
+.card-article.ui.grid>.row.share-mobile-grid { 
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (min-width: 768px) {
+  .card-article {
+    width: 750px !important;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 767px) {
+  .ui.container.cont-main {
+    max-width: 660px !important;
+    margin: auto !important;
+    padding: 0px 14px;
   }
-  to {
-    transform: rotate(360deg);
+  .ui.stackable.grid.card-article>.column.row>.column {
+    padding: 0px !important;
+  }
+  .card-article img {
+    border-radius: 12px 12px 0px 0px;
+  }
+  .ui.container>.ui.stackable.grid>.row>.column.card-information {
+    padding: 32px 28px 14px 28px!important;
+    font-size: 0.85rem !important;
+  }
+  .card-article .card-information h2 {
+    font-size: 1.2rem !important;
+  }
+  .avatar-share {
+    margin-top: 16px !important;
+  }
+  .avatar-share.none {
+    display: none !important;
+  }
+  .share-button i.inverted.circular.icon {
+    margin-top: 0px !important;
+  }
+  .share-mobile-grid{
+    background-color: var(--Very-Dark-Grayish-Blue) !important;
+    border-radius: 0px 0px 12px 12px;
+    height: 64px !important;
+  }
+  .share-mobile-gridB{
+    width: 100% !important;
+    padding: 5px 13px  5px 24px !important;
+    margin: 0px !important;
+  }
+  .share-mobile-gridB span {
+    padding-right: 15px;
+  }
+  .card-article.ui.grid>.row.share-mobile-grid.flex {
+    display: flex;
   }
 }
