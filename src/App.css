@@ -61,8 +61,8 @@ body {
 .share-button i.inverted.circular.icon {
   color: var(--Very-Dark-Grayish-Blue) !important;
   background-color: var(--Light-Grayish-Blue) !important;
-  margin-top: 15px;
-  margin-right: 0px;
+  margin-top: 0px !important;
+  margin-right: 0px !important;
   height: 24px !important;
   width:  24px !important;
   transition: color 150ms ease-in-out;
@@ -124,6 +124,15 @@ body {
   .card-article {
     width: 750px !important;
   }
+  .ui.grid.avatar-share>.row {
+    padding: 0px !important;
+  }
+  .avatar-share {
+    margin-top: 16px !important;
+  }
+  .ui.grid.avatar-share>.row>.column>img {
+    top: 7px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .ui.container.cont-main {
@@ -156,7 +165,7 @@ body {
   .share-mobile-grid{
     background-color: var(--Very-Dark-Grayish-Blue) !important;
     border-radius: 0px 0px 12px 12px;
-    height: 64px !important;
+    height: 63.125px !important;
   }
   .share-mobile-gridB{
     width: 100% !important;
